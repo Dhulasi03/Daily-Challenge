@@ -1,0 +1,36 @@
+//Armstrong number
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+    int n,t,s=0,res=0;
+    scanf("%d",&n);
+    t=n;
+    while(t>0)
+    {
+        s++;
+        t/=10;
+    }
+    //printf("%d\n",s);
+    t=n;
+    
+    while(t>0)
+    {
+        int r=t%10;
+        res+=pow(r,s);
+        t/=10;
+        
+        
+    }
+    //printf("%d",res);
+    if(res==n)
+    {
+        printf("Armstrong");
+    }
+    else{
+        printf("no");
+    }
+    
+    return 0;
+}
